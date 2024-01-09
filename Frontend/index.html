@@ -16,6 +16,7 @@
       <table id="cryptoTable">
         <thead>
           <tr>
+            <th>#</th>
             <th>Name</th>
             <th>Last Traded Price</th>
             <th>Buy / Sell Price</th>
@@ -24,7 +25,7 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Table content will be populated dynamically -->
+          <!-- Table content will be populated dynamically  here-->
         </tbody>
       </table>
     </section>
@@ -40,10 +41,13 @@
 
             // Check if data is an array
             if (Array.isArray(data)) {
+              // Variable to keep track of the serial number
+              let serialNumber = 1;
               // Iterate over the array elements
               data.forEach((crypto) => {
                 const row = document.createElement("tr");
                 row.innerHTML = `
+                <td>${serialNumber}</td>
                   <td>${crypto.name}</td>
                   <td>${crypto.last}</td>
                   <td>${crypto.buy} / ${crypto.sell}</td>
@@ -51,6 +55,8 @@
                   <td>${crypto.base_unit}</td>
                 `;
                 tableBody.appendChild(row);
+                // Increment the serial number for the next row
+                serialNumber++;
               });
             } else {
               console.log("Invalid API response format. Expected an array.");
