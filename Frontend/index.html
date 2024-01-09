@@ -12,6 +12,18 @@
       <h1>HODLINFO</h1>
     </header>
 
+    <section id="additionalInfo">
+      <h2 style="color: white">Additional Information</h2>
+      <div>
+        <p>0.75% 5 Mins</p>
+        <p>1.22% 1 Hour</p>
+        <p>Best Price to Trade: ₹42,27,915</p>
+        <p>Average BTC/INR net price including commission</p>
+        <p>8.94% 1 Day</p>
+        <p>12.61% 7 Days</p>
+      </div>
+    </section>
+
     <section>
       <table id="cryptoTable">
         <thead>
@@ -48,11 +60,11 @@
                 const row = document.createElement("tr");
                 row.innerHTML = `
                 <td>${serialNumber}</td>
-                  <td>${crypto.name}</td>
-                  <td>${crypto.last}</td>
-                  <td>${crypto.buy} / ${crypto.sell}</td>
-                  <td>${crypto.volume}</td>
-                  <td>${crypto.base_unit}</td>
+                <td>${crypto.name}</td>
+               <td>₹${crypto.last}</td>
+              <td>₹${crypto.buy} / ₹${crypto.sell}</td>
+              <td>${crypto.volume}</td>
+              <td>${crypto.base_unit}</td>
                 `;
                 tableBody.appendChild(row);
                 // Increment the serial number for the next row

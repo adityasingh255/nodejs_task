@@ -6,8 +6,13 @@ body {
 }
 
 header {
+  background-image: url("/Frontend/img/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
   background-color: #333;
   color: #fff;
+  padding: 20px;
   text-align: center;
   padding: 1em;
 }
@@ -33,4 +38,51 @@ td {
 th {
   background-color: #021103da;
   color: white;
+}
+tr:hover {
+  background-color: #21993b;
+}
+
+/* Add this to your existing style.css file or create a new one */
+/* Add this to your existing style.css file or create a new one */
+
+#additionalInfo {
+  margin-top: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#additionalInfo h2 {
+  text-align: center;
+  color: #333;
+}
+
+#additionalInfo div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+#additionalInfo p {
+  flex: 0 0 calc(33.33% - 20px);
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 5px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+#additionalInfo p:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  #additionalInfo p {
+    flex: 0 0 calc(50% - 20px);
+  }
 }
