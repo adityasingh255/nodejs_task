@@ -1,5 +1,6 @@
 const express = require("express");
 require("dotenv").config();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const CryptoData = require("./db/crypto");
 const fetchAndStoreData = require("./api/cryptoDataHandler");
@@ -7,6 +8,7 @@ const fetchAndStoreData = require("./api/cryptoDataHandler");
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 // Initialize data when the server starts
 fetchAndStoreData();
 
